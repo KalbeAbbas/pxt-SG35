@@ -56,6 +56,11 @@ namespace SG35 {
         init();
         onReceivedDataHandler = cb
     }
+    
+    //% shim=parall::startParallel
+    export function startParallel(u: () => void) {
+        return 1;
+    }
 
     begin()
 }
