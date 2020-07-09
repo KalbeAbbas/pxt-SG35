@@ -59,7 +59,7 @@ namespace SG35 {
                 let rcv = read()
                 if(rcv)
                 {
-                    cb(pm1(), pm25(), pm10());
+                    cb(receivedPM1, receivedPM25, receivedPM10);
                 }
                 basic.pause(1)
             }
