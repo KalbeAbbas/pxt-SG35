@@ -40,12 +40,15 @@ namespace SG35 {
     function init() {
 
         startParallel(function(){
-            let rcv = read()
-            if(rcv)
-            {
-                onReceivedDataHandler(pm1(), pm25(), pm10())
-            }
-            basic.pause(1)
+                while(true)
+                {
+                    let rcv = read()
+                    if(rcv)
+                    {
+                        onReceivedDataHandler(pm1(), pm25(), pm10())
+                    }
+                    basic.pause(1)
+                }
         })
     }
 
